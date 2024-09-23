@@ -1,7 +1,9 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+// Animating 'View My Work' Button
+const viewMyWorkButton = document.querySelector('.view-my-work-button');
+viewMyWorkButton.addEventListener('mouseover', () => {
+    viewMyWorkButton.classList.add('button-animated');
+});
 
-    // Here you can handle form submission, like sending the data to a server.
-    alert("Thank you for your message!");
-
-    //
+viewMyWorkButton.addEventListener('mouseleave', () => {
+    viewMyWorkButton.classList.remove('button-animated');
+});
