@@ -3,98 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Saman Khan's Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <video autoplay muted loop class="background-video">
-                <source src="coding-animation.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <h1>A Glimpse into My Work</h1>
-            <p>I’m a Tech-Savvy Developer with a Passion for Solutions.</p>
-            <a href="#projects" class="cta">View My Work</a>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>My Portfolio</h1>
+            <h2>A Glimpse into My Work</h2>
+            <button class="view-my-work-button">View My Work</button>
         </div>
     </header>
-    
-    <section id="about">
+
+    <div class="coding-animation">
+        <video src="coding-animation.mp4" autoplay loop muted></video>
+    </div>
+
+    <section class="about-me">
         <h2>About Me</h2>
-        <img src="myportfoliopic.jpg" alt="My Photo" class="profile-pic">
         <p>🌟 Hey there! I’m Saman, a tech enthusiast and aspiring software developer on a mission to blend innovation with everyday life. Currently diving into the world of full-stack development and machine learning, I love crafting solutions that make a difference. 🎉</p>
         <p>When I'm not coding, you'll find me exploring the latest tech trends or perfecting my spoken English. I’m all about teamwork and collaboration, and I can’t wait to bring fresh ideas to life. Let’s connect and create something amazing together! 🚀</p>
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-card">
-            <h3>Recipe Recommendation System</h3>
-            <p>An intelligent web application that suggests recipes based on the ingredients you have at home.</p>
-        </div>
-        <div class="project-card">
-            <h3>HealthiFy</h3>
-            <p>A food ordering website featuring a chatbot for easy interaction and orders.</p>
-        </div>
-        <div class="project-card">
-            <h3>Mental Health Chatbot</h3>
-            <p>A conversational agent that uses NLP to provide emotional support, offer coping strategies, and direct users to resources for mental health care based on their inputs.</p>
-        </div>
-        <div class="project-card">
-            <h3>Email Classifier</h3>
-            <p>A machine learning application that classifies emails as spam or not spam using NLP techniques.</p>
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">A Glimpse into My Work</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item" style="background-image: url('serene-background.jpg');">
+                <h3>SereneTalk</h3>
+                <p>A soothing companion for your mental well-being.</p>
+            </div>
+            <div class="portfolio-item" style="background-image: url('savorly-background.jpg');">
+                <h3>Savorly</h3>
+                <p>Serves up personalized recipes that turn your ingredients into mouthwatering dishes.</p>
+            </div>
+            <div class="portfolio-item" style="background-image: url('healthify-background.jpg');">
+                <h3>HealthiFy</h3>
+                <p>Healthy food, made easy and delicious!</p>
+            </div>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Python</span>
-            <span class="skill">C++</span>
-            <span class="skill">Data Structures and Algorithms</span>
-            <span class="skill">MySQL</span>
-            <span class="skill">AIML</span>
-            <span class="skill">OOPs</span>
-            <span class="skill">System Design</span>
-            <span class="skill">Salesforce Developer (Apex and LWC)</span>
-        </div>
-    </section>
-
-    <section id="education">
+    <section class="education">
         <h2>Education</h2>
         <ul>
             <li>Bachelor's of Technology (CSE), LNCTS Bhopal</li>
-            <li>10th + 12th, St. Joseph's Convent Sr. Sec School Bhopal</li>
+            <li>10th: St. Joseph's Convent Sr. Sec. School Bhopal</li>
+            <li>12th: St. Joseph's Convent Sr. Sec. School Bhopal</li>
         </ul>
     </section>
 
-    <section id="contact">
+    <section class="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <input type="submit" value="Send Message">
         </form>
     </section>
-
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
