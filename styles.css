@@ -2,11 +2,11 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Light background for contrast */
+    background-color: #f7f7f7; /* Light background for the entire page */
 }
 
 header {
-    background-color: #5c6bc0; /* Header background color */
+    background: #4CAF50; /* Change this to your preferred header color */
     color: white;
     padding: 20px;
     text-align: center;
@@ -19,7 +19,8 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -33,119 +34,62 @@ nav a {
 }
 
 .hero {
-    padding: 50px 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    color: #333;
-    margin-top: 30px;
-}
-
-#about {
-    padding: 20px;
-    text-align: center;
-}
-
-.profile-pic {
-    width: 150px;
-    height: auto;
-    border-radius: 50%; /* Circular image */
-    margin-top: 20px;
-}
-
-#projects {
-    padding: 20px;
+    padding: 50px 0;
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
-    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
-    margin: 10px 0;
-    transition: transform 0.2s;
-    background-size: cover; /* To ensure background image covers the card */
-    color: #333; /* Dark text for visibility */
+    margin: 10px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s;
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
-.project-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.detailed-description {
+    display: none; /* Initially hide the detailed description */
+    font-weight: normal;
 }
 
-.project-description {
-    display: none; /* Initially hide description */
-}
-
-.project-card:hover .project-description {
-    display: block; /* Show description on hover */
-    animation: flash 0.5s; /* Flash effect */
-}
-
-@keyframes flash {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-#skills {
-    padding: 20px;
+.project-card:hover .detailed-description {
+    display: block; /* Show on hover */
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 15px; /* Space between skill boxes */
 }
 
 .skill {
-    background-color: #5c6bc0;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 5px;
+    background-color: #f0f0f0; /* Light background for visibility */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for spacing */
+    transition: transform 0.3s; /* Smooth transition for rotation */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-#contact {
-    padding: 20px;
-    text-align: center;
+.skill:hover {
+    transform: rotate(15deg); /* Rotate on hover */
 }
 
-#contact-form input,
-#contact-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.button {
+    background-color: #4CAF50; /* Change this to your preferred button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for both effects */
 }
 
-button {
-    background-color: #5c6bc0;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3949ab; /* Darker shade on hover */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #5c6bc0;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    background-color: #45a049; /* Darker shade for hover effect */
 }
