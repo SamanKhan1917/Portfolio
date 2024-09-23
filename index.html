@@ -1,95 +1,93 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7; /* Light background for the entire page */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>A Glimpse into My Work</h1>
+            <p>I'm a Tech-Savvy Developer with a Passion for Solutions.</p>
+            <a href="#projects" class="cta button">View My Work</a>
+        </div>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>🌟 Hey there! I’m Saman, a tech enthusiast and aspiring software developer on a mission to blend innovation with everyday life. Currently diving into the world of full-stack development and machine learning, I love crafting solutions that make a difference. 🎉</p>
+        <p>When I'm not coding, you'll find me exploring the latest tech trends or perfecting my English. I’m all about teamwork and collaboration, and I can’t wait to bring fresh ideas to life. Let’s connect and create something amazing together! 🚀</p>
+        <button class="button">Learn More</button>
+    </section>
 
-header {
-    background: #4CAF50; /* Change this to your preferred header color */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <h3>Savorly</h3>
+            <p>An intelligent web application that suggests recipes based on the ingredients you have at home.</p>
+            <div class="detailed-description">An intelligent web application that suggests recipes based on the ingredients you have at home.</div>
+        </div>
+        <div class="project-card">
+            <h3>HealthiFy</h3>
+            <p>A food ordering website featuring a chatbot for easy interaction and orders.</p>
+            <div class="detailed-description">A food ordering website featuring a chatbot for easy interaction and orders.</div>
+        </div>
+        <div class="project-card">
+            <h3>SereneTalk</h3>
+            <p>A soothing companion for your mental well-being.</p>
+            <div class="detailed-description">A conversational chatbot that provides emotional support, offers coping strategies, and directs users to resources for mental health care based on their inputs.</div>
+        </div>
+        <button class="button">View Projects</button>
+    </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">C++</span>
+            <span class="skill">RESTful APIs</span>
+            <span class="skill">Data Structures and Algorithms</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Networking</span>
+            <span class="skill">Cloud Computing</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Object Oriented Programming</span>
+            <span class="skill">System Design</span>
+            <span class="skill">Salesforce Development</span>
+        </div>
+        <button class="button">See Skills</button>
+    </section>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero {
-    padding: 50px 0;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    text-align: left;
-    position: relative;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.detailed-description {
-    display: none; /* Initially hide the detailed description */
-    font-weight: normal;
-}
-
-.project-card:hover .detailed-description {
-    display: block; /* Show on hover */
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Space between skill boxes */
-}
-
-.skill {
-    background-color: #f0f0f0; /* Light background for visibility */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 20px; /* Padding for spacing */
-    transition: transform 0.3s; /* Smooth transition for rotation */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-.skill:hover {
-    transform: rotate(15deg); /* Rotate on hover */
-}
-
-.button {
-    background-color: #4CAF50; /* Change this to your preferred button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for both effects */
-}
-
-.button:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    background-color: #45a049; /* Darker shade for hover effect */
-}
+    <script src="script.js"></script>
+</body>
+</html>
