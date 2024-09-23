@@ -1,131 +1,122 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: lavender;
-    color: black;
+* {
+    box-sizing: border-box;
     margin: 0;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: black;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('hero-background.jpg');
-    background-size: cover;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.view-my-work-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.view-my-work-button:hover {
-    background-color: purple;
-}
-
-/* Portfolio Section */
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.portfolio-item {
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-/* Coding Animation */
-.coding-animation video {
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Education Section */
-.education {
-    padding: 20px;
-}
-
-.education ul {
-    list-style: none;
     padding: 0;
 }
 
-.education li {
-    animation: fade-in 1s ease-in-out;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+    color: #333;
 }
 
-/* Contact Form Styling */
-.contact {
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    color: #6a11cb;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+section {
+    padding: 50px 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background: #e2e2e2;
+    margin: 20px 0;
     padding: 20px;
+    border-radius: 10px;
 }
 
-.contact-form {
-    animation: form-slide-in 1s ease;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
+form input, form textarea {
+    margin: 10px 0;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.contact-form input[type="submit"] {
-    background-color: black;
+form button {
+    padding: 10px;
+    background: #6a11cb;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.contact-form input[type="submit"]:hover {
-    background-color: purple;
+form button:hover {
+    background: #2575fc;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes form-slide-in {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #6a11cb;
+    color: white;
 }
