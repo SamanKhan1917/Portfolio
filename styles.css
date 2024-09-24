@@ -42,6 +42,26 @@ nav a:hover {
     color: #ffeb3b; /* Change color on hover */
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space between social links and hero section */
+}
+
+.social-button {
+    background-color: #ffeb3b;
+    color: #14183D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-button:hover {
+    background-color: #fbc02d; /* Darken the button on hover */
+}
+
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -89,7 +109,7 @@ h2 {
 }
 
 .typewriter {
-    font-family: 'Playpen Sans', sans-serif;
+    font-family: 'Playpen Sans', sans-serif; /* Change to Playpen Sans for typewriter effect */
     font-size: 16px;
     text-align: center;
 }
@@ -105,11 +125,11 @@ h2 {
     transition: transform 0.3s;
 }
 
-/* Add background images */
+/* Background images for each project */
 #savorly {
     background-image: url('savorly-background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the background image */
 }
 
 #healthify {
@@ -124,26 +144,25 @@ h2 {
     background-position: center;
 }
 
-.project-card h3 {
-    font-weight: bold; /* Bold title */
-    color: #14183D; /* Dark color */
-}
-
-.project-card .description {
-    opacity: 0; /* Initially hidden */
-    position: absolute; /* Position absolutely within the card */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center align */
-    transition: opacity 0.3s ease; /* Smooth fade-in transition */
-}
-
 .project-card:hover {
     transform: scale(1.05); /* Scale up on hover */
 }
 
-.project-card:hover .description {
-    opacity: 1; /* Show description on hover */
+.project-card h3, .project-card p {
+    color: white; /* Change text color for visibility */
+}
+
+.project-card:hover h3, .project-card:hover p {
+    display: none; /* Hide title and caption on hover */
+}
+
+.project-card:hover .detailed-description {
+    display: block; /* Show description on hover */
+}
+
+.detailed-description {
+    display: none; /* Hide detailed description by default */
+    color: white; /* Set color for better visibility */
 }
 
 .skills-container {
@@ -153,40 +172,49 @@ h2 {
 }
 
 .skill {
-    background-color: #e0e0e0;
+    background-color: #ffeb3b;
+    color: #14183D;
+    border-radius: 5px;
+    padding: 10px 15px;
     margin: 5px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: transform 0.3s; /* Add transition for rotation */
+    transition: transform 0.3s;
 }
 
 .skill:hover {
-    transform: rotate(10deg); /* Rotate on hover */
+    transform: rotate(10deg); /* Rotate effect on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #14183D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffeb3b; /* Change background color on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #14183D; /* Footer background color */
+    background-color: #14183D;
     color: white;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #14183D;
-    background-color: #ffeb3b; /* Attractive button color */
-    padding: 10px 20px; /* Button padding */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s;
-}
-
-.social-links a:hover {
-    background-color: #fbc02d; /* Change button color on hover */
 }
