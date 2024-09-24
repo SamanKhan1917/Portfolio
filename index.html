@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,6 +20,7 @@
             </ul>
         </nav>
         <div class="hero">
+            <img src="myportfoliopic.jpg" alt="My Portfolio Picture" class="portfolio-pic"> <!-- Added Portfolio Picture -->
             <h1>A Glimpse into My Work</h1>
             <p>I'm a Tech-Savvy Developer with a Passion for Solutions.</p>
             <a href="#projects" class="cta">View My Work</a>
@@ -33,24 +35,24 @@
 
     <section id="projects">
         <h2>My Projects</h2>
-        <div class="project-card">
+        <div class="project-card" style="background-image: url('savorly-background.jpg');">
             <h3>Savorly</h3>
             <p>Serving up personalized recipes that turn ingredients into mouthwatering dishes.</p>
-            <div class="project-details">
+            <div class="project-description">
                 Savorly is a smart recipe platform powered by AI that transforms ingredients into personalized dishes. Utilizing OpenAI's LLM and NLP technologies, it suggests tailored recipes based on user inputs. Built with HTML, CSS, and JavaScript, it features a FastAPI and MySQL backend for efficient performance and seamless functionality.
             </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" style="background-image: url('healthify-background.jpg');">
             <h3>HealthiFy</h3>
             <p>Healthy food, made easy and delicious.</p>
-            <div class="project-details">
+            <div class="project-description">
                 HealthiFy is an AI-powered platform that enhances healthy food ordering with a streamlined interface built using HTML, CSS, and JavaScript. It leverages AI and ML technologies, featuring a Dialogflow NLP-powered chatbot for personalized interactions, and utilizes a FastAPI and MySQL backend to ensure seamless, data-driven performance.
             </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" style="background-image: url('serenTalk-background.jpg');">
             <h3>SereneTalk</h3>
             <p>A soothing companion for your mental well-being.</p>
-            <div class="project-details">
+            <div class="project-description">
                 SereneTalk is a smart mental health chatbot designed to provide support for individuals seeking comfort during difficult times. Powered by Rasa and utilizing Gemini LLM and NLP technologies, it engages users in empathetic conversations and offers coping strategies. Built with Streamlit for the user interface and leveraging technologies like Angular and Node.js, SereneTalk features a FastAPI and MySQL backend, ensuring efficient performance and a seamless user experience while prioritizing mental well-being.
             </div>
         </div>
@@ -79,17 +81,17 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <div class="social-links">
-            <a href="https://github.com/SamanKhan1917" class="social-link" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/saman-khan-843b07232/" class="social-link" target="_blank">LinkedIn</a>
-            <a href="mailto:samii.khan1917@gmail.com" class="social-link" target="_blank">Email Me</a>
-        </div>
         <form id="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <div class="social-links">
+            <a href="https://github.com/SamanKhan1917" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/saman-khan-843b07232/" target="_blank">LinkedIn</a>
+            <a href="mailto:samii.khan1917@gmail.com">Email</a>
+        </div>
     </section>
 
     <footer>
