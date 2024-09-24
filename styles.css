@@ -80,69 +80,64 @@ h2 {
     margin-bottom: 20px;
 }
 
+.portfolio-pic {
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    margin: 20px auto; /* Center the image */
+    display: block; /* Centering */
+}
+
 .typewriter {
     font-family: 'Playpen Sans', sans-serif;
+    font-size: 16px;
     text-align: center;
-    display: inline-block;
-    overflow: hidden; /* Ensures the text is hidden until typed */
-    white-space: nowrap; /* Prevent line breaks */
-    border-right: .15em solid orange; /* Typewriter cursor */
-    width: 0; /* Start with zero width */
-    animation: typing 4s steps(40, end) forwards, blink-caret .75s step-end infinite; /* Animation */
+    animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black; /* Color of the blinking cursor */
+    }
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.7); /* Light background with slight opacity */
-    border-radius: 8px;
-    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
     padding: 20px;
+    margin: 10px;
     text-align: center;
-    position: relative;
-    overflow: hidden; /* Ensure text stays within card bounds */
-    transition: transform 0.3s ease; /* Smooth scaling transition */
+    position: relative; /* Position relative for the description overlay */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s;
 }
 
-/* Background images for each project */
-#savorly {
-    background-image: url('savorly-background.jpg'); /* Path to your savorly image */
-    background-size: cover; /* Cover the entire card */
-    background-position: center; /* Center the image */
-}
-
-#healthify {
-    background-image: url('healthify-background.jpg'); /* Path to your healthify image */
-    background-size: cover;
-    background-position: center;
-}
-
-#serenetalk {
-    background-image: url('serenTalk-background.jpg'); /* Path to your sereneTalk image */
-    background-size: cover;
-    background-position: center;
+.project-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .project-card h3 {
-    font-weight: bold; /* Make title bold */
-    color: #14183D; /* Dark color for titles */
-    margin: 0;
-    z-index: 1; /* Ensure title is above background */
-    position: relative; /* Make title relative to the card */
+    font-weight: bold; /* Bold title */
+    color: #14183D; /* Dark color */
 }
 
 .project-card p {
-    font-weight: bold; /* Make description bold */
-    color: #14183D; /* Dark color for descriptions */
-    margin: 0;
+    font-weight: bold; /* Bold description */
+    color: #14183D; /* Dark color */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth fade-in transition */
     z-index: 1; /* Ensure description is above background */
