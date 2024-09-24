@@ -1,12 +1,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light background color for the body */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #14183D;
+    background-color: #14183D; /* Header background color */
     color: white;
     padding: 20px 0;
 }
@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffeb3b;
+    color: #ffeb3b; /* Change color on hover */
 }
 
 .hero {
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 .cta:hover {
-    background-color: #fbc02d;
+    background-color: #fbc02d; /* Darken the button on hover */
 }
 
 section {
@@ -81,31 +81,52 @@ h2 {
 }
 
 .portfolio-pic {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    margin: 20px auto; /* Center the image */
+    display: block; /* Centering */
 }
 
-.about-text {
-    text-align: center; /* Center align the about me paragraph */
+.typewriter {
+    font-family: 'Playpen Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Position relative for the description overlay */
+    overflow: hidden; /* Hide overflow */
     transition: transform 0.3s;
 }
 
+/* Add background images */
+#savorly {
+    background-image: url('savorly-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#healthify {
+    background-image: url('healthify-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#serenetalk {
+    background-image: url('serenTalk-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .project-card h3 {
-    font-weight: bold;
-    color: #14183D;
+    font-weight: bold; /* Bold title */
+    color: #14183D; /* Dark color */
 }
 
 .project-card .description {
@@ -136,17 +157,17 @@ h2 {
     margin: 5px;
     padding: 10px 20px;
     border-radius: 20px;
-    transition: transform 0.3s; /* Add transition effect */
+    transition: transform 0.3s; /* Add transition for rotation */
 }
 
 .skill:hover {
-    transform: rotate(10deg); /* Rotate effect on hover */
+    transform: rotate(10deg); /* Rotate on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #14183D;
+    background-color: #14183D; /* Footer background color */
     color: white;
 }
 
@@ -156,16 +177,16 @@ footer {
     margin-top: 20px;
 }
 
-.social-button {
-    background-color: #ffeb3b;
-    color: #14183D;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 0 10px;
+.social-links a {
+    margin: 0 15px;
     text-decoration: none;
+    color: #14183D;
+    background-color: #ffeb3b; /* Attractive button color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s;
 }
 
-.social-button:hover {
-    background-color: #fbc02d;
+.social-links a:hover {
+    background-color: #fbc02d; /* Change button color on hover */
 }
