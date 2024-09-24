@@ -1,19 +1,15 @@
-// Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    alert('Thank you for your message! I will get back to you soon.'); // Show a thank you message
-    this.reset(); // Reset the form fields
-});
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
 
-// Project Card Hover Animation
-const projectCards = document.querySelectorAll('.project-card');
+    // Get form data
+    const name = event.target[0].value;
+    const email = event.target[1].value;
+    const message = event.target[2].value;
 
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'scale(1.05)'; // Scale up the card on hover
-    });
+    // Here you can implement logic to send the data to your server
+    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
 
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1)'; // Scale back to original size
-    });
+    // Clear the form fields
+    event.target.reset();
+    alert("Thank you for your message!"); // Simple alert on submission
 });
