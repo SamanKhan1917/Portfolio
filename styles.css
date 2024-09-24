@@ -1,12 +1,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4; /* Light background color for the body */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #14183D; /* Header background color */
+    background-color: #14183D;
     color: white;
     padding: 20px 0;
 }
@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffeb3b; /* Change color on hover */
+    color: #ffeb3b;
 }
 
 .hero {
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 .cta:hover {
-    background-color: #fbc02d; /* Darken the button on hover */
+    background-color: #fbc02d;
 }
 
 section {
@@ -81,70 +81,47 @@ h2 {
 }
 
 .portfolio-pic {
-    width: 150px; /* Set the width of the image */
-    height: auto; /* Keep the aspect ratio */
-    border-radius: 50%; /* Make it circular */
-    margin: 20px auto; /* Center the image */
-    display: block; /* Centering */
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
 }
 
-.typewriter {
-    font-family: 'Playpen Sans', sans-serif;
-    font-size: 16px;
-    text-align: center;
-    animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow */
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: black; /* Color of the blinking cursor */
-    }
+.about-text {
+    text-align: center; /* Center align the about me paragraph */
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     text-align: center;
-    position: relative; /* Position relative for the description overlay */
-    overflow: hidden; /* Hide overflow */
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s;
+}
+
+.project-card h3 {
+    font-weight: bold;
+    color: #14183D;
+}
+
+.project-card .description {
+    opacity: 0; /* Initially hidden */
+    position: absolute; /* Position absolutely within the card */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center align */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
 }
 
 .project-card:hover {
     transform: scale(1.05); /* Scale up on hover */
 }
 
-.project-card h3 {
-    font-weight: bold; /* Bold title */
-    color: #14183D; /* Dark color */
-}
-
-.project-card p {
-    font-weight: bold; /* Bold description */
-    color: #14183D; /* Dark color */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth fade-in transition */
-    z-index: 1; /* Ensure description is above background */
-    position: relative; /* Make description relative to the card */
-}
-
-.project-card:hover p {
+.project-card:hover .description {
     opacity: 1; /* Show description on hover */
 }
 
@@ -159,12 +136,17 @@ h2 {
     margin: 5px;
     padding: 10px 20px;
     border-radius: 20px;
+    transition: transform 0.3s; /* Add transition effect */
+}
+
+.skill:hover {
+    transform: rotate(10deg); /* Rotate effect on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #14183D; /* Footer background color */
+    background-color: #14183D;
     color: white;
 }
 
@@ -174,13 +156,16 @@ footer {
     margin-top: 20px;
 }
 
-.social-links a {
-    margin: 0 15px;
-    text-decoration: none;
+.social-button {
+    background-color: #ffeb3b;
     color: #14183D;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-.social-links a:hover {
-    color: #ffeb3b; /* Change color on hover */
+.social-button:hover {
+    background-color: #fbc02d;
 }
