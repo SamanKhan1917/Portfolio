@@ -1,23 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contact-form");
+// Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    alert('Thank you for your message! I will get back to you soon.'); // Show a thank you message
+    this.reset(); // Reset the form fields
+});
 
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the default form submission
+// Project Card Hover Animation
+const projectCards = document.querySelectorAll('.project-card');
 
-        // Get form values
-        const name = contactForm.elements[0].value;
-        const email = contactForm.elements[1].value;
-        const message = contactForm.elements[2].value;
+projectCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.05)'; // Scale up the card on hover
+    });
 
-        // Simple validation
-        if (name && email && message) {
-            // Form submission logic here (e.g., send data to server or display success message)
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            
-            // Clear the form
-            contactForm.reset();
-        } else {
-            alert("Please fill in all fields.");
-        }
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)'; // Scale back to original size
     });
 });
