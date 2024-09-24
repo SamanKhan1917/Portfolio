@@ -1,95 +1,210 @@
+/* General styles */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f7f7f7; /* Light background for the entire page */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5; /* Light background color for contrast */
 }
 
+/* Header styles */
 header {
-    background: #4CAF50; /* Change this to your preferred header color */
+    background-color: #9B59B6; /* Change header background color */
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    gap: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #d1c6db; /* Lighter shade for hover effect */
+}
+
+/* Hero section styles */
 .hero {
-    padding: 50px 0;
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.cta {
+    background-color: #8e44ad; /* CTA button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #732d91; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* About section styles */
+#about {
+    padding: 20px;
+    text-align: center;
+}
+
+#about p {
+    font-family: 'Playpen Sans', sans-serif; /* Playpen font */
+    font-size: 18px;
+    color: #4B4B4B; /* Dark color for better visibility */
+    margin: 0 auto;
+    max-width: 600px;
+    animation: fadeIn 2s ease; /* Animation for the about section */
+}
+
+/* Projects section styles */
+#projects {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Align projects */
 }
 
 .project-card {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 20px;
-    margin: 10px;
-    text-align: left;
+    margin: 15px;
+    width: 250px; /* Adjusted width for vertical blocks */
     position: relative;
-    transition: transform 0.3s;
+    overflow: hidden; /* Hide overflow for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.detailed-description {
-    display: none; /* Initially hide the detailed description */
-    font-weight: normal;
+.project-card h3 {
+    font-weight: bold; /* Bold title */
 }
 
-.project-card:hover .detailed-description {
-    display: block; /* Show on hover */
+.project-card p {
+    font-weight: bold; /* Bold description */
+}
+
+.project-card:hover::after {
+    content: attr(data-description); /* Display detailed description on hover */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Skills section styles */
+#skills {
+    padding: 20px;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Space between skill boxes */
+    justify-content: center; /* Center skills */
 }
 
 .skill {
-    background-color: #f0f0f0; /* Light background for visibility */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 20px; /* Padding for spacing */
-    transition: transform 0.3s; /* Smooth transition for rotation */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #6C5CE7; /* Skill box color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer; /* Pointer effect */
+    transition: transform 0.3s ease;
+    display: inline-block; /* Keep skill boxes inline */
 }
 
 .skill:hover {
-    transform: rotate(15deg); /* Rotate on hover */
+    transform: rotate(15deg); /* Rotate effect on hover */
 }
 
-.button {
-    background-color: #4CAF50; /* Change this to your preferred button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for both effects */
+/* Contact section styles */
+#contact {
+    padding: 20px;
+    text-align: center;
 }
 
-.button:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    background-color: #45a049; /* Darker shade for hover effect */
+#contact form {
+    display: flex;
+    flex-direction: column; /* Vertical alignment of form elements */
+    align-items: center; /* Center align form elements */
+}
+
+#contact input,
+#contact textarea {
+    width: 300px; /* Consistent width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #9B59B6; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer effect */
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #732d91; /* Darker shade on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #9B59B6; /* Footer background color */
+    color: white;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
