@@ -1,23 +1,21 @@
-/* General styles */
 body {
-    margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5f5; /* Light background color for contrast */
+    background-color: #f0f4f8; /* Lighter background color */
+    margin: 0;
+    padding: 0;
+    color: #14183D; /* Dark text color for visibility */
 }
 
-/* Header styles */
 header {
-    background-color: #9B59B6; /* Change header background color */
-    color: white;
+    background-color: #008CBA; /* Header color */
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 nav .logo {
@@ -26,185 +24,125 @@ nav .logo {
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+    list-style-type: none;
+    padding: 0;
 }
 
-nav a {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #d1c6db; /* Lighter shade for hover effect */
-}
-
-/* Hero section styles */
 .hero {
-    margin-top: 20px;
+    padding: 50px 0;
+}
+
+.hero img.portfolio-pic {
+    width: 150px; /* Adjust size as needed */
+    border-radius: 50%;
 }
 
 .hero h1 {
-    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
     font-size: 36px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .cta {
-    background-color: #8e44ad; /* CTA button color */
-    color: white;
     padding: 10px 20px;
+    background-color: #005f73; /* Button color */
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta:hover {
-    background-color: #732d91; /* Darker shade on hover */
-    transform: scale(1.05); /* Scale effect on hover */
-}
-
-/* About section styles */
-#about {
+section {
     padding: 20px;
     text-align: center;
-}
-
-#about p {
-    font-family: 'Playpen Sans', sans-serif; /* Playpen font */
-    font-size: 18px;
-    color: #4B4B4B; /* Dark color for better visibility */
-    margin: 0 auto;
-    max-width: 600px;
-    animation: fadeIn 2s ease; /* Animation for the about section */
-}
-
-/* Projects section styles */
-#projects {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Align projects */
 }
 
 .project-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fallback color for visibility */
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
     padding: 20px;
-    margin: 15px;
-    width: 250px; /* Adjusted width for vertical blocks */
+    border-radius: 10px;
+    transition: transform 0.3s;
     position: relative;
-    overflow: hidden; /* Hide overflow for the hover effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: black; /* Project text color */
 }
 
 .project-card h3 {
-    font-weight: bold; /* Bold title */
+    font-weight: bold;
 }
 
 .project-card p {
-    font-weight: bold; /* Bold description */
+    margin: 10px 0;
 }
 
-.project-card:hover::after {
-    content: attr(data-description); /* Display detailed description on hover */
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
+.project-description {
+    display: none;
 }
 
-/* Skills section styles */
-#skills {
-    padding: 20px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center skills */
+.project-card:hover .project-description {
+    display: block;
 }
 
 .skill {
-    background-color: #6C5CE7; /* Skill box color */
-    color: white;
+    display: inline-block;
     padding: 10px;
-    border-radius: 5px;
     margin: 5px;
-    cursor: pointer; /* Pointer effect */
-    transition: transform 0.3s ease;
-    display: inline-block; /* Keep skill boxes inline */
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    transition: transform 0.3s;
 }
 
 .skill:hover {
-    transform: rotate(15deg); /* Rotate effect on hover */
+    transform: rotate(10deg);
 }
 
-/* Contact section styles */
-#contact {
-    padding: 20px;
-    text-align: center;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column; /* Vertical alignment of form elements */
-    align-items: center; /* Center align form elements */
-}
-
-#contact input,
-#contact textarea {
-    width: 300px; /* Consistent width */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#contact button {
-    background-color: #9B59B6; /* Button color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; /* Pointer effect */
-    transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-    background-color: #732d91; /* Darker shade on hover */
-}
-
-/* Footer styles */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #9B59B6; /* Footer background color */
-    color: white;
+    padding: 20px;
 }
 
-/* Animation for fade-in effect */
-@keyframes fadeIn {
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #008CBA;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #005f73;
+}
+
+.about-text {
+    font-family: 'Playpen Sans', sans-serif;
+    text-align: center;
+    animation: typing 2s steps(20);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
     from {
-        opacity: 0;
+        width: 0;
     }
     to {
-        opacity: 1;
+        width: 100%;
     }
 }
