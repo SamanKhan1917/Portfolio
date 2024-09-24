@@ -1,21 +1,21 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f0f4f8; /* Lighter background color */
+    background-color: #f4f4f4; /* Light background color for the body */
     margin: 0;
     padding: 0;
-    color: #14183D; /* Dark text color for visibility */
 }
 
 header {
-    background-color: #008CBA; /* Header color */
-    padding: 20px;
-    text-align: center;
+    background-color: #14183D; /* Header background color */
+    color: white;
+    padding: 20px 0;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
 nav .logo {
@@ -24,31 +24,32 @@ nav .logo {
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Change color on hover */
 }
 
 .hero {
-    padding: 50px 0;
-}
-
-.hero img.portfolio-pic {
-    width: 150px; /* Adjust size as needed */
-    border-radius: 50%;
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .hero h1 {
     font-size: 36px;
+    margin: 20px 0;
 }
 
 .hero p {
@@ -56,93 +57,135 @@ nav ul li a {
 }
 
 .cta {
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #005f73; /* Button color */
-    color: white;
+    background-color: #ffeb3b;
+    color: #14183D;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #fbc02d; /* Darken the button on hover */
 }
 
 section {
-    padding: 20px;
+    padding: 40px 20px;
+}
+
+h2 {
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.typewriter {
+    font-family: 'Playpen Sans', sans-serif;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is hidden until typed */
+    white-space: nowrap; /* Prevent line breaks */
+    border-right: .15em solid orange; /* Typewriter cursor */
+    width: 0; /* Start with zero width */
+    animation: typing 4s steps(40, end) forwards, blink-caret .75s step-end infinite; /* Animation */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Fallback color for visibility */
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Light background with slight opacity */
+    border-radius: 8px;
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    text-align: center;
     position: relative;
-    overflow: hidden;
-    color: black; /* Project text color */
+    overflow: hidden; /* Ensure text stays within card bounds */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Background images for each project */
+#savorly {
+    background-image: url('savorly-background.jpg'); /* Path to your savorly image */
+    background-size: cover; /* Cover the entire card */
+    background-position: center; /* Center the image */
+}
+
+#healthify {
+    background-image: url('healthify-background.jpg'); /* Path to your healthify image */
+    background-size: cover;
+    background-position: center;
+}
+
+#serenetalk {
+    background-image: url('serenTalk-background.jpg'); /* Path to your sereneTalk image */
+    background-size: cover;
+    background-position: center;
 }
 
 .project-card h3 {
-    font-weight: bold;
+    font-weight: bold; /* Make title bold */
+    color: #14183D; /* Dark color for titles */
+    margin: 0;
+    z-index: 1; /* Ensure title is above background */
+    position: relative; /* Make title relative to the card */
 }
 
 .project-card p {
-    margin: 10px 0;
+    font-weight: bold; /* Make description bold */
+    color: #14183D; /* Dark color for descriptions */
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+    z-index: 1; /* Ensure description is above background */
+    position: relative; /* Make description relative to the card */
 }
 
-.project-description {
-    display: none;
+.project-card:hover p {
+    opacity: 1; /* Show description on hover */
 }
 
-.project-card:hover .project-description {
-    display: block;
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill {
-    display: inline-block;
-    padding: 10px;
+    background-color: #e0e0e0;
     margin: 5px;
-    border: 2px solid #008CBA;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.skill:hover {
-    transform: rotate(10deg);
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    background-color: #14183D; /* Footer background color */
+    color: white;
 }
 
 .social-links {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .social-links a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
-    color: #008CBA;
+    color: #14183D;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #005f73;
-}
-
-.about-text {
-    font-family: 'Playpen Sans', sans-serif;
-    text-align: center;
-    animation: typing 2s steps(20);
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+    color: #ffeb3b; /* Change color on hover */
 }
