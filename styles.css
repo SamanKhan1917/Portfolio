@@ -31,7 +31,7 @@ body {
     border-radius: 8px;
     margin: 10px;
     width: 200px; /* Set a fixed width */
-    height: 200px; /* Set a fixed height to make it square */
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
     transition: transform 0.2s;
     display: flex;
     flex-direction: column; /* Align children vertically */
@@ -44,7 +44,7 @@ body {
 
 .project-image {
     width: 100%;
-    height: 100px; /* Set fixed height for images */
+    height: 100px; /* Fixed height for images */
     object-fit: cover; /* Ensure the image covers the area */
 }
 
@@ -62,7 +62,7 @@ body {
 
     .project-card {
         width: 180px; /* Slightly smaller for tablets */
-        height: 180px; /* Keep square */
+        height: auto; /* Allow auto height */
     }
 
     .nav {
@@ -82,7 +82,7 @@ body {
 
     .project-card {
         width: 150px; /* Smaller size for mobile */
-        height: 150px; /* Keep square */
+        height: auto; /* Allow auto height */
         margin: 10px 0;
     }
 
@@ -95,7 +95,7 @@ body {
 /* Additional styling for the About Me section */
 .about-me {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+    font-family: 'Lato', sans-serif; /* Change font to Lato */
     padding: 20px;
 }
 
