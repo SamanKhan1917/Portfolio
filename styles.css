@@ -1,220 +1,108 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4; /* Light background color for the body */
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-    background-color: #14183D; /* Header background color */
-    color: white;
-    padding: 20px 0;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: lavender;
+            margin: 0;
+            padding: 0;
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+        header {
+            text-align: center;
+            padding: 50px;
+        }
 
-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+        h1 {
+            font-size: 2.5em;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+        .about-me {
+            text-align: center;
+            margin: 20px;
+        }
 
-nav ul li {
-    margin-left: 20px;
-}
+        .portfolio-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .portfolio-item {
+            margin: 10px;
+            border: 1px solid #14183D;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
 
-nav a:hover {
-    color: #ffeb3b; /* Change color on hover */
-}
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; /* Space between social links and hero section */
-}
+        .portfolio-item h3 {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-.social-button {
-    background-color: #ffeb3b;
-    color: #14183D;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
+        .portfolio-item p {
+            padding: 0 10px;
+        }
 
-.social-button:hover {
-    background-color: #fbc02d; /* Darken the button on hover */
-}
+        .portfolio-item a {
+            display: block;
+            text-align: center;
+            background-color: #14183D;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px 0;
+        }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-}
+        .portfolio-item a:hover {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
 
-.hero h1 {
-    font-size: 36px;
-    margin: 20px 0;
-}
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
 
-.hero p {
-    font-size: 18px;
-}
+    <div class="about-me">
+        <p>I'm a Tech-Savvy Developer with a Passion for Solutions.</p>
+    </div>
 
-.cta {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ffeb3b;
-    color: #14183D;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+    <div class="portfolio-section">
+        <div class="portfolio-item">
+            <img src="serenTalk-background.jpg" alt="SereneTalk">
+            <h3>SereneTalk</h3>
+            <p>A soothing companion for mental well-being.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="savorly-background.jpg" alt="Savorly">
+            <h3>Savorly</h3>
+            <p>Personalized recipes that turn ingredients into mouthwatering dishes.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="portfolio-item">
+            <img src="healthify-background.jpg" alt="Healthify">
+            <h3>Healthify</h3>
+            <p>Healthy food, made easy and delicious.</p>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</body>
 
-.cta:hover {
-    background-color: #fbc02d; /* Darken the button on hover */
-}
-
-section {
-    padding: 40px 20px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.portfolio-pic {
-    width: 150px; /* Set the width of the image */
-    height: auto; /* Keep the aspect ratio */
-    border-radius: 50%; /* Make it circular */
-    margin: 20px auto; /* Center the image */
-    display: block; /* Centering */
-}
-
-.typewriter {
-    font-family: 'Ubuntu', sans-serif; /* Change to Playpen Sans for typewriter effect */
-    font-size: 16px;
-    text-align: center;
-}
-
-.project-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    position: relative; /* Position relative for the description overlay */
-    overflow: hidden; /* Hide overflow */
-    transition: transform 0.3s;
-}
-
-/* Background images for each project */
-#savorly {
-    background-image: url('savorly-background.jpg');
-    background-size: cover; /* Cover the entire card */
-    background-position: center; /* Center the background image */
-}
-
-#healthify {
-    background-image: url('healthify-background.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#serenetalk {
-    background-image: url('sereneTalk-background.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Scale up on hover */
-}
-
-.project-card h3, .project-card p {
-    color: white; /* Change text color for visibility */
-}
-
-.project-card:hover h3, .project-card:hover p {
-    display: none; /* Hide title and caption on hover */
-}
-
-.project-card:hover .detailed-description {
-    display: block; /* Show description on hover */
-}
-
-.detailed-description {
-    display: none; /* Hide detailed description by default */
-    color: white; /* Set color for better visibility */
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.skill {
-    background-color: #ffeb3b;
-    color: #14183D;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 5px;
-    transition: transform 0.3s;
-}
-
-.skill:hover {
-    transform: rotate(10deg); /* Rotate effect on hover */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-form input, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px;
-    background-color: #14183D;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #ffeb3b; /* Change background color on hover */
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #14183D;
-    color: white;
-}
+</html>
