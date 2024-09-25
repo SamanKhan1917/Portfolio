@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: lavender; /* your preferred background color */
+    background-color: lavender; /* updated to your preferred color */
 }
 
 .header, .footer {
@@ -30,12 +30,8 @@ body {
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 10px;
-    width: 200px; /* Set a fixed width */
-    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    width: calc(33% - 40px); /* Adjust width for larger screens */
     transition: transform 0.2s;
-    display: flex;
-    flex-direction: column; /* Align children vertically */
-    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .project-card:hover {
@@ -44,13 +40,13 @@ body {
 
 .project-image {
     width: 100%;
-    height: 100px; /* Fixed height for images */
-    object-fit: cover; /* Ensure the image covers the area */
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .project-description {
     padding: 10px;
-    flex-grow: 1; /* Allow description to take remaining space */
 }
 
 /* Responsive Styles */
@@ -61,8 +57,7 @@ body {
     }
 
     .project-card {
-        width: 180px; /* Slightly smaller for tablets */
-        height: auto; /* Allow auto height */
+        width: calc(50% - 20px); /* Adjust width for tablets */
     }
 
     .nav {
@@ -81,8 +76,7 @@ body {
     }
 
     .project-card {
-        width: 150px; /* Smaller size for mobile */
-        height: auto; /* Allow auto height */
+        width: 90%; /* Full width for mobile */
         margin: 10px 0;
     }
 
@@ -95,7 +89,7 @@ body {
 /* Additional styling for the About Me section */
 .about-me {
     text-align: center;
-    font-family: 'Lato', sans-serif; /* Change font to Lato */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter font */
     padding: 20px;
 }
 
